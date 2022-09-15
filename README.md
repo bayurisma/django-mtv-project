@@ -4,7 +4,7 @@ Berikut adalah link hasil web yang telah di-deploy [Tugas 2 Web](https://tugas-2
 
 ![Django Chart](django-chart.png)
 
-Ketika user melakukan sebuah request, request tersebut akan dilanjutkan menuju urls.py. Request akan diarahkan menuju path url yang sesuai, path url tersebut akan melakukan pemanggilan fungsi yang berada di views.py. Di views.py fungsi tersebut akan menampilkan berkas html beserta data-data yang dibutuhkan. Data tersebut diambil dan diolah di models.py kemudian dikirimkan kembali ke views.py. Sehingga halaman web beserta data-data yang sesuai dengan request dapat ditampilkan kembali ke user.
+Ketika user melakukan sebuah request, request tersebut akan dilanjutkan menuju urls.py. Request akan diarahkan menuju path url yang sesuai, path url tersebut akan melakukan pemanggilan fungsi yang berada di views.py. Di views.py fungsi tersebut akan menampilkan berkas html beserta data-data yang dibutuhkan. Data tersebut diambil dan diolah di models.py kemudian dikirimkan kembali ke views.py. Sehingga halaman web beserta data-data yan sesuai dengan request dapat ditampilkan kembali ke user.
 
 ## Virtual Environment
 
