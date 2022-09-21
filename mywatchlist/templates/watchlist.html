@@ -7,6 +7,12 @@
 <h3>Student ID: {{studentID}}</h3>
 
 <table>
+  {% if watched >= unwatched %}
+  <h2>Selamat, kamu sudah banyak menonton!</h2>
+  {% else %}
+  <h2>Wah, kamu masih sedikit menonton!</h2>
+  {% endif %}
+
   <tr>
     <th>No</th>
     <th>Watched</th>
