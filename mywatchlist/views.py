@@ -8,11 +8,14 @@ studentID = 2106750401
 
 def show_watchlist(req):
     data_watchlist = MyWatchList.objects.all()
+    watched = data_watchlist.filter(watched=True)
     context  = {
         'name' : mhs_name,
         'studentID': studentID,
-        'watchlist': data_watchlist
+        'watchlist': data_watchlist,
+        'watched': watched,
     }
+    print(watched)
     return render(req, 'watchlist.html', context)
 
 def show_xml(req):
