@@ -1,6 +1,6 @@
 # Tugas 3 PBP 22/23 Repository
 
-Berikut adalah link hasil web yang telah di-deploy [Tugas 2 Web](https://watchlistku.herokuapp.com/mywatchlist/html/)
+Berikut adalah link hasil web yang telah di-deploy [My Watchlist](https://watchlistku.herokuapp.com/mywatchlist/html/)
 
 ## Perbedaan JSON, XML, dan HTML
 
