@@ -1,0 +1,112 @@
+[
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 1,
+    "fields": {
+      "watched": true,
+      "title": "Mencuri Raden Saleh",
+      "rating": 5,
+      "release_date": "2022-08-25",
+      "review": "This is the new face of indonesian movies! Actually i am not really fans of indonesian movies, but this movie really make me questions myself. The actings is really good, i love the effort from the actors doing some action and make it really cool, their expression seem so natural and make me impressed. The storyline is good, is not perfect but it's still good, there still some plothole in this movies and i hope the scriptwriter can fill it in the sequel, but it's really good, it's so rare i see some good storyline in indonesian action movies. The CGV is really amazing, it's good and felt so natural. The make up artis, they did a perfect job, but For make up after fighting, you have to add more bruises. It's really worth my 2,5 hours watched this movie. Keep the good work guys, and i hope i can hear a good news about the sequel."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 2,
+    "fields": {
+      "watched": true,
+      "title": "The Batman",
+      "rating": 5,
+      "release_date": "2022-03-04",
+      "review": "There’s a lot of talk about how this is the sexiest Batman or the most emo Batman. What’s more important is that this is finally a Batman who sits down and looks for clues in a big stack of dusty old files"
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 3,
+    "fields": {
+      "watched": false,
+      "title": "Turning Red",
+      "rating": 3,
+      "release_date": "2022-03-04",
+      "review": "Maybe the best Pixar film since Coco. The time period and location were the perfect choices for this. Honestly, I really didn’t like it at first mainly due to the animation style and I found the character introductions nauseating (especially Mei), but the longer the movie continued, the more I began to warm up to everything. I thought the mom was the best character surprising enough."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 4,
+    "fields": {
+      "watched": true,
+      "title": "Everything Everywhere All at Once",
+      "rating": 4,
+      "release_date": "2022-04-08",
+      "review": "Profoundly deep, genuinely moving, utterly hilarious, highly imaginative and a visual feast. Haven't laughed this hard, cried this much or thought so deeply about any film in 2022 Much less all in the same viewing. This was indeed everything, everywhere all at once."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 5,
+    "fields": {
+      "watched": true,
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "rating": 3,
+      "release_date": "2022-05-06",
+      "review": "Sam Raimi definitely put a splash of horror in this action film. Doctor Strange in the Multiverse of Madness is darker & more violent than any previous MCU movie, which could be considered a strength. However, I felt like there was not enough multiverse and maybe too much madness. Despite the entertaining visuals, the plot is fairly chaotic, and the acting & dialogue are inconsistent. This movie is an entertaining ride, but it's a little too messy to stand on its own."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 6,
+    "fields": {
+      "watched": true,
+      "title": "Top Gun: Maverick",
+      "rating": 4,
+      "release_date": "2022-05-27",
+      "review": "Top Gun Maverick is an awesome action film that lives up to the original film and way superior as well. It is one awesome thrill ride that will have the audiences gasping for air with its exhilarating aerial combat scenes.\r\n\r\nThe plot is great. It continues with Maverick (Tom Cruise) being assigned to train new pilots before they go off on a challenging mission. Rooster (Miles Teller) is among the recruits which Maverick tries to reconnect after the incident with his father in the previous film."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 7,
+    "fields": {
+      "watched": false,
+      "title": "Bullet Train",
+      "rating": null,
+      "release_date": "2022-07-15",
+      "review": "A fun and crazy film full of twists and turns, incredibly surprised how this managed to scrape being a 15 UK rating with that amount of swearing and gore but still a fun, Deadpool-esque, film."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 8,
+    "fields": {
+      "watched": true,
+      "title": "Nope",
+      "rating": 2,
+      "release_date": "2022-07-22",
+      "review": "Jordan's movies are hit or miss. Get Out was good. US was meh. This was terrible. Go in knowing it'll be hit or miss. This was a miss. Good story idea, horrific execution. The leads were good but the action was meandering. A story needs to have a reason to be told. This one had mo reason. Zero. Next time I will wait until his movies are on HBO MAX."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 9,
+    "fields": {
+      "watched": false,
+      "title": "Pinocchio",
+      "rating": 2,
+      "release_date": "2022-09-08",
+      "review": "I was bored for most of this. I didn't care.\r\n\r\nThe presence of Hanks normally ensures a certain quality - not this time.\r\n\r\nThe FX are ropey. The cat and pinocchio are not well done. Its being described as a live action remake, but most of the characters are CGI.\r\n\r\nParts of it move along at a speed and others seem to drag.\r\n\r\nTom Hanks cannot save this."
+    }
+  },
+  {
+    "model": "mywatchlist.mywatchlist",
+    "pk": 10,
+    "fields": {
+      "watched": false,
+      "title": "Morbius",
+      "rating": 1,
+      "release_date": "2022-04-01",
+      "review": ""
+    }
+  }
+]

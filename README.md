@@ -1,21 +1,19 @@
-# Tugas 2 PBP 22/23 Repository
+# Tugas 3 PBP 22/23 Repository
 
-Berikut adalah link hasil web yang telah di-deploy [Tugas 2 Web](https://tugas-2-project.herokuapp.com/katalog)
+Berikut adalah link hasil web yang telah di-deploy [Tugas 2 Web](https://watchlistku.herokuapp.com/mywatchlist/html/)
 
-![Django Chart](django-chart.png)
+## Perbedaan JSON, XML, dan HTML
 
-Ketika user melakukan sebuah request, request tersebut akan dilanjutkan menuju urls.py. Request akan diarahkan menuju path url yang sesuai, path url tersebut akan melakukan pemanggilan fungsi yang berada di views.py. Di views.py fungsi tersebut akan menampilkan berkas html beserta data-data yang dibutuhkan. Data tersebut diambil dan diolah di models.py kemudian dikirimkan kembali ke views.py. Sehingga halaman web beserta data-data yan sesuai dengan request dapat ditampilkan kembali ke user.
+JSON adalah singkatan dari JavaScript Object Notation merupakan suatu format yang digunakan untuk menyimpan, membaca, serta menukar informasi dari web server sehingga dapat dibaca oleh para pengguna. Walaupun memiliki fungsi yang serupa dengan XML, akan tetapi JSON memiliki perbedaan di beberapa faktor seperti cara menyimpan elemennya, keamanan, dan cara penerapannya. Selain itu, JSON juga memiliki kelebihan yaitu dapat menyimpan data dalam bentuk array sehingga transfer data menjadi lebih mudah dan mendukung beberapa bahasa pemrograman lain. JSON juga memiliki kekurangan yaitu format penulisannya sulit untuk dipahami oleh manusia dan rentan terhadap serangan.
 
-## Virtual Environment
+Di sisi lain, ada XML yang digunakan untuk menyimpan dan menyederhanakan pertukaran data sedangkan HTML digunakan untuk menampilkan data. XML dapat digunakan di berbagai sistem karena merupakan bahasa pemrograman yang independen. Akan tetapi XML juga memiliki kekurangan seperti tidak adanya penggunaan array. Sementara itu, HTML adalah bahasa markup yang digunakan untuk membuat halaman website. Isinya terdiri dari berbagai elemen, tag, dan atribute. XML juga menggunakan sistem tag, tetapi dapat dikustomisasi secara beragam dan tidak terkhusus seperti HTML.
 
-Virtual environment berperan seperti workspace khusus bagi setiap project yang ingin kita kerjakan. Hal ini berguna ketika kita membutuhkan dependencies yang berbeda-beda untuk setiap project kita. Dengan demikian, virtual environment dipakai sehingga kita tidak perlu mengubah configuration di sistem operasi kita setiap ingin memulai project baru. Kita tetap dapat membuat Django web app tanpa virtual environment, tetapi modul yang kita pakai akan diinstall secara global dan dapat berpotensi menimbulkan masalah kompalibitas saat kita ingin membangun web app lainnya.
+## Pentingnya Data Delivery
 
-## Implementasi poin 1-4
+Dalam membuat sebuah platform pastinya kita akan memiliki sekumpulan data yang baik itu akan disimpan atau dikirimkan kepada pengguna yang mengakses platform tersebut. Data-data tersebut dapat disajikan dalam berbagai format sesuai request yang dikirimkan. Oleh karena itu, peran data delivery disini sangat vital untuk menampilkan response yang sesuai kepada client. Karena tanpa adanya data delivery maka platform kita akan sulit untuk menampilkan data.
 
-1. Hal yang pertama dilakukan adalah mengimport class CatalogItem dari models.py. CatalogItem ini merupakan model database yang nantinya akan dirender. Seluruh properti di dalamnya akan dimasukkan ke dalam variabel data_catalog_item. Setelah itu saya membuat variable berisi nama dan NPM, kedua variabel tersebut bersama dengan data_catalog_item dimasukkan ke dalam object dictionary context. Kemudian fungsi show_catalog didefinisikan yang akan merender file katalog.html beserta context untuk menampilkan halaman web beserta data yang sesuai.
+## Implementasi Checkpoint
 
-2. Untuk routing, pertama adalah melakukan import fungsi show_catalog yang telah dibuat di views.py. Kemudian saya membuat urlpatterns berisi path url yang akan dihubungkan dengan pemanggilan fungsi show_catalog tersebut.
+Pertama-tama saya membuat app project baru bernama mywatchlist dan menambahkan path routingnya ke dalam urls.py. Kemudian saya membuat models untuk atribut-atribut data yang akan dimasukkan ke dalam watchlist item. Setelah itu, migrations dilakukan untuk mengimplementasi model tersebut ke dalam database. Saya menggunakan fitur djangoadmin untuk menambahkan 10 data item yang dibutuhkan. Data tersebut disimpan ke dalam objek MyWatchList yang sebelumnya sudah didefinisikan di models.py.
 
-3. Setiap data dari data_catalog_item yang dikirimkan melalui context di views.py akan diiterasi dengan for loop untuk membentuk sebuah tabel. Selain itu, saya juga menambahkan sedikit styling untuk tabelnya di base.html.
-
-4. Setelah melakukan push ke dalam repo github, saya memeriksa kelengkapan file Procfile, dpl.yml, dan gitignore untuk melakukan deploy. Deploy dilakukan dengan menghubungkan API code dari Heroku melalui variabel yang disediakn di fitur repository secrets oleh github. Setelah terhubung, deploy dapat dilakukan dengan menjalankan workflow repo github tersebut.
+Beralih ke implementasi fitur penyajian data. Saya mendefinisikan 3 fungsi berbeda di dalam views.py untuk menampilkan data dalam format HTML, XML, dan JSON. Kemudian, fungsi-fungsi tersebut dipanggil dalam pathnya masing-masing di urls.py yang telah dibuat. Setelah memastikan seluruh URL dapat berjalan, deployment pun dilakukan ke Heroku untuk app mywatchlist.
