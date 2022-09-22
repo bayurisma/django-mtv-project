@@ -17,3 +17,9 @@ Dalam membuat sebuah platform pastinya kita akan memiliki sekumpulan data yang b
 Pertama-tama saya membuat app project baru bernama mywatchlist dan menambahkan path routingnya ke dalam urls.py. Kemudian saya membuat models untuk atribut-atribut data yang akan dimasukkan ke dalam watchlist item. Setelah itu, migrations dilakukan untuk mengimplementasi model tersebut ke dalam database. Saya menggunakan fitur djangoadmin untuk menambahkan 10 data item yang dibutuhkan. Data tersebut disimpan ke dalam objek MyWatchList yang sebelumnya sudah didefinisikan di models.py.
 
 Beralih ke implementasi fitur penyajian data. Saya mendefinisikan 3 fungsi berbeda di dalam views.py untuk menampilkan data dalam format HTML, XML, dan JSON. Kemudian, fungsi-fungsi tersebut dipanggil dalam pathnya masing-masing di urls.py yang telah dibuat. Setelah memastikan seluruh URL dapat berjalan, deployment pun dilakukan ke Heroku untuk app mywatchlist.
+
+## Testing Postman
+
+![Test HTML](static/test_html.jpg)
+![Test JSON](static/test_json.jpg)
+![Test XML](static/test_xml.jpg)
