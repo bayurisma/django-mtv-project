@@ -27,12 +27,9 @@ def create(request):
     task_form = TaskForm()
 
     if request.method == 'POST':
-        Task.objects.create(
-            user = request.user,
-            title = request.POST.get('title'),
-            description = request.POST.get('description'),
-            date = request.POST.get('date'),
-        )
+        form = task_form.saved(commit=False)
+        form.user = request.user
+        form.saved()
 
         return HttpResponseRedirect('/todolist/') 
 
