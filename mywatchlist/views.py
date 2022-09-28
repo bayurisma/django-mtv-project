@@ -9,6 +9,7 @@ studentID = 2106750401
 def show_watchlist(req):
     data_watchlist = MyWatchList.objects.all()
     watched = list(filter(lambda x: x.watched == True, data_watchlist))
+    # watched = MyWatchList.objects.filter(watched=True)
     context  = {
         'name' : mhs_name,
         'studentID': studentID,

@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block meta %}
+<title>{{page_title}}</title>
+{% endblock meta %} {% block content %}
+
+<h1>{{page_title}}</h1>
+
+<form method="POST" action="">
+  {% csrf_token %}
+  <table>
+    {{form.as_table}}
+  </table>
+  <input type="submit" name="submit" value="Register" />
+</form>
+
+{% if messages %}
+<ul>
+  {% for message in messages %}
+  <li>{{ message }}</li>
+  {% endfor %}
+</ul>
+{% endif %} {% endblock content %}

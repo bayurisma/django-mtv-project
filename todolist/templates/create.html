@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block meta %}
+<title>{{page_title}}</title>
+{% endblock meta %} {% block content %}
+
+<h1>{{page_title}}</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <table>
+    {{task_form.as_table}}
+  </table>
+  <button type="Submit">Create</button>
+</form>
+
+{% endblock content %}
