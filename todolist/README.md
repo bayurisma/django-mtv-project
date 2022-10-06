@@ -17,11 +17,11 @@ External CSS membutuhkan sebuah file CSS eksternal yang berisi style website sec
 
 ## Jelaskan tipe-tipe CSS selector yang kamu ketahui
 
-.class : memilih elemen berdasarkan jenis class
-#id : memilih elemen berdasarkan nilai id
-element : memilih berdasarkan jenis elemen tertentu
-:active : memilih elemen link yang aktif
-:hover : memilih elemen link yang disorot oleh kursor
+`.class` : memilih elemen berdasarkan jenis class
+`#id` : memilih elemen berdasarkan nilai id
+`element` : memilih berdasarkan jenis elemen tertentu
+`:active` : memilih elemen link yang aktif
+`:hover` : memilih elemen link yang disorot oleh kursor
 
 ## Implementasi Checkpoint
 
