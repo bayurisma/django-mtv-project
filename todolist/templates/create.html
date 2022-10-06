@@ -1,15 +1,29 @@
 {% extends 'base.html' %} {% block meta %}
 <title>{{page_title}}</title>
+<style>
+  form {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 50px;
+    padding: 25px;
+    background-color: khaki;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    border-radius: 15px;
+    max-width: 500px;
+  }
+</style>
 {% endblock meta %} {% block content %}
 
-<h1>{{page_title}}</h1>
-
 <form method="POST">
+  <h1 style="text-align: center">{{page_title}}</h1>
   {% csrf_token %}
   <table>
     {{task_form.as_table}}
   </table>
-  <button type="Submit">Create</button>
+  <input style="text-align: center" class="btn login_btn btn-secondary" type="submit" name="submit" value="Create" />
 </form>
 
 {% endblock content %}

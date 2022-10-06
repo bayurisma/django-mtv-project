@@ -78,3 +78,7 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
+
+def delete(request, delete_id):
+    Task.objects.filter(pk=delete_id).delete()
+    return redirect("todolist:index")

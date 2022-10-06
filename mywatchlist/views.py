@@ -17,7 +17,6 @@ def show_watchlist(req):
         'watched': len(watched),
         'unwatched': len(data_watchlist) - len(watched)
     }
-    print(watched)
     return render(req, 'watchlist.html', context)
 
 def show_xml(req):

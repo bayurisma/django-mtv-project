@@ -1,29 +1,37 @@
 {% extends 'base.html' %} {% block meta %}
 <title>{{page_title}}</title>
+<style>
+  .header-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+</style>
 {% endblock meta %} {% block content %}
 
-<h1>{{page_title}}</h1>
-<h3>User: {{request.user}}</h3>
+<div class="header-bar">
+  <div>
+    <h3>Hello {{request.user}}</h3>
+  </div>
+  <div>
+    <a class="btn btn-outline-primary btn-sm" href="{% url 'todolist:create-task' %}">Add New Task</a>
+    <a class="btn btn-outline-primary btn-sm" href="{% url 'todolist:logout' %}">Logout</a>
+  </div>
+</div>
 
-<button><a href="{% url 'todolist:create-task' %}">Add New Task</a></button>
-
-<table>
-  <tr>
-    <th>Date Created</th>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
+<div class="row">
   {% for item in tasks %}
-  <tr>
-    <th>{{item.date}}</th>
-    <th>{{item.title}}</th>
-    <th>{{item.description}}</th>
-  </tr>
+  <div class="col-sm-6" style="padding-bottom: 5px">
+    <div class="card">
+      <div class="card-body" style="width: 50%">
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.description}}</p>
+        <a href="#" class="btn btn-outline-danger btn-sm" href="{% url 'todolist:delete' item.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
   {% endfor %}
-</table>
-
-<h5>Sesi terakhir login: {{ last_login }}</h5>
-
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+</div>
 
 {% endblock content %}
