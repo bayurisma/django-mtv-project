@@ -8,13 +8,12 @@ External CSS membutuhkan sebuah file CSS eksternal yang berisi style website sec
 
 ## Jelaskan tag HTML5 yang kamu ketahui.
 
-<a> untuk menyisipkan sebuah hyperlink
-
-<form> untuk membuat form HTML
-<img> untuk memasukkan gambar
-<label> untuk memberikan label pada input user
-<table> untuk membuat sebuah tabel data
-<script> untuk menyisipkan skrip kode ke file HTML
+`<a>` untuk menyisipkan sebuah hyperlink
+`<form>` untuk membuat form HTML
+`<img>` untuk memasukkan gambar
+`<label>` untuk memberikan label pada input user
+`<table>` untuk membuat sebuah tabel data
+`<script>` untuk menyisipkan skrip kode ke file HTML
 
 ## Jelaskan tipe-tipe CSS selector yang kamu ketahui
 
