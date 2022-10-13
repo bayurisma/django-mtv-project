@@ -1,0 +1,55 @@
+html body {
+  overflow: visible;
+}
+
+.header-bar {
+  background: #eee5e9;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  z-index: 10;
+}
+
+.grid {
+  margin: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+
+.grid > article {
+  background: #eee5e9;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.grid > article:hover {
+  transform: translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article > button {
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#submitForm {
+  display: flex;
+  float: right;
+}

@@ -1,0 +1,13 @@
+form {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+  padding: 20px;
+  background-color: khaki;
+  -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+  box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+  border-radius: 15px;
+  max-width: 400px;
+}

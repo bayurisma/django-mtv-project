@@ -1,6 +1,7 @@
 from multiprocessing import context
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound
+from django.core import serializers
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -23,6 +24,11 @@ def show_task(request):
 
     return render(request, 'todolist.html', context)
 
+@login_required(login_url='/todolist/login/')
+def show_task_json(request):
+    tasks = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", tasks))
+
 def create(request):
     task_form = TaskForm()
 
@@ -40,6 +46,18 @@ def create(request):
     }
 
     return render(request, 'create.html', context)
+
+@login_required(login_url='/todolist/login/')
+def addTask(request):
+    if request.method == 'POST':
+        title = request.POST.get("title")
+        description = request.POST.get("description")
+
+        new_task = Task(user=request.user, title=title, description=description)
+        new_task.save()
+        
+        return HttpResponse(b"CREATED", status=201)
+    return HttpResponseNotFound()
 
 def register(request):
     form = UserCreationForm()
@@ -78,7 +96,9 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
-
+    
+@login_required(login_url='/todolist/login/')
 def delete(request, delete_id):
-    Task.objects.filter(pk=delete_id).delete()
+    if (Task.objects.get(pk=delete_id).user == request.user):
+        Task.objects.filter(pk=delete_id).delete()
     return redirect("todolist:index")
